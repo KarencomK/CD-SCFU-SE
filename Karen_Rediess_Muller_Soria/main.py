@@ -88,7 +88,7 @@ while True:
         print("Temperature ", temp)
         humid = sensor.humidity()
         print("humidity ", humid)
-        #ACENDE LED 
+        #ACENDE LED PINK
         led.value(1)
         
       #MOSTRA INFORMAÇÕES NO DISPLAY
@@ -109,6 +109,7 @@ while True:
         
     except OSError as err:
         print("Waring! Error reading data")
+        #ACENDE LED AMARELO
         led_waring.value(1)
         #MOSTRA INFORMAÇÕES NO DISPLAY
         oled.text('WARING!', 30, 20)
@@ -161,4 +162,4 @@ while True:
     mqttc.disconnect()
 
 #PUBLICA A CADA 10 MIM
-    sleep(300)
+    sleep(600)
